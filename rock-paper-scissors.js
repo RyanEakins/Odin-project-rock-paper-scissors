@@ -7,11 +7,11 @@ function getComputerChoice () {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
     let computerChoice = " ";
     if (randomNumber == 1) {
-        computerChoice = "rock!";
+        computerChoice = "rock";
     } if (randomNumber == 2) {
-        computerChoice = "paper!";
+        computerChoice = "paper";
     } if (randomNumber == 3) {
-        computerChoice = "scissors!";
+        computerChoice = "scissors";
     }
     return computerChoice;
 }
@@ -22,9 +22,9 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         console.log("It's a tie!");
     } else if (
-        (humanChoice === "rock!" && computerChoice === "scissors!") ||
-        (humanChoice === "paper" && computerChoice === "rock!") ||
-        (humanChoice === "scissors!" && computerChoice ==="paper!")
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice ==="paper")
     ) {
         humanScore++;
         console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
